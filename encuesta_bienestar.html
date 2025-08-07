@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Encuesta Bienestar Emocional Adolescente</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f9f9;
+    color: #333;
+    margin: 0; padding: 0;
+  }
+  header {
+    background: #2a9d8f;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  main {
+    max-width: 600px;
+    margin: 20px auto 40px;
+    background: white;
+    padding: 25px 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+  h2 {
+    color: #264653;
+    text-align: center;
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .question p {
+    font-weight: 600;
+  }
+  label {
+    display: block;
+    margin: 6px 0;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1.5px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  label:hover {
+    background-color: #e0f2f1;
+  }
+  input[type="radio"]:checked + label {
+    background-color: #2a9d8f;
+    color: white;
+    border-color: #1f7867;
+  }
+  button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #2a9d8f;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(42,157,143,0.4);
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #1f7867;
+  }
+  .result {
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 25px;
+    font-weight: 700;
+  }
+  .memoria {
+    margin-top: 40px;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+  }
+  .contacto {
+    margin-top: 25px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #2a9d8f;
+  }
+  .contacto a {
+    color: #e76f51;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .contacto a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 640px) {
+    main {
+      margin: 10px;
+      padding: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>Encuesta de Bienestar Emocional Adolescente</header>
+
+<main>
+  <h2>Por favor, respondé las siguientes preguntas con sinceridad:</h2>
+  <form id="encuestaForm">
+
+    <div class="question">
+      <p>1. ¿Con qué frecuencia te sentís triste o vacío?</p>
+      <input type="radio" id="q1a1" name="q1" value="4" required />
+      <label for="q1a1">Nunca</label>
+      <input type="radio" id="q1a2" name="q1" value="3" />
+      <label for="q1a2">A veces</label>
+      <input type="radio" id="q1a3" name="q1" value="2" />
+      <label for="q1a3">Frecuentemente</label>
+      <input type="radio" id="q1a4" name="q1" value="1" />
+      <label for="q1a4">Siempre</label>
+    </div>
+
+    <div class="question">
+      <p>2. ¿Te cuesta dormir o te despertás durante la noche?</p>
+      <input type="radio" id="q2a1" name="q2" value="4" required />
+      <label for="q2a1">Nunca</label>
+      <input type="radio" id="q2a2" name="q2" value="3" />
+      <label for="q2a2">A veces</label>
+      <input type="radio" id="q2a3" name="q2" value="2" />
+      <label for="q2a3">Frecuentemente</label>
+      <input type="radio" id="q2a4" name="q2" value="1" />
+      <label for="q2a4">Siempre</label>
+    </div>
+
+    <div class="question">
+      <p>3. ¿Tenés alguien con quien hablar cuando te sentís mal?</p>
+      <input type="radio" id="q3a1" name="q3" value="1" required />
+      <label for="q3a1">Nunca</label>
+      <input type="radio" id="q3a2" name="q3" value="2" />
+      <label for="q3a2">A veces</label>
+      <input type="radio" id="q3a3" name="q3" value="3" />
+      <label for="q3a3">Frecuentemente</label>
+      <input type="radio" id="q3a4" name="q3" value="4" />
+      <label for="q3a4">Siempre</label>
+    </div>
+
+    <div class="question">
+      <p>4. ¿Te sentís valorado/a por tus amigos o familia?</p>
+      <input type="radio" id="q4a1" name="q4" value="1" required />
+      <label for="q4a1">Nunca</label>
+      <input type="radio" id="q4a2" name="q4" value="2" />
+      <label for="q4a2">A veces</label>
+      <input type="radio" id="q4a3" name="q4" value="3" />
+      <label for="q4a3">Frecuentemente</label>
+      <input type="radio" id="q4a4" name="q4" value="4" />
+      <label for="q4a4">Siempre</label>
+    </div>
+
+    <div class="question">
+      <p>5. ¿Te resulta difícil concentrarte en la escuela?</p>
+      <input type="radio" id="q5a1" name="q5" value="4" required />
+      <label for="q5a1">Nunca</label>
+      <input type="radio" id="q5a2" name="q5" value="3" />
+      <label for="q5a2">A veces</label>
+      <input type="radio" id="q5a3" name="q5" value="2" />
+      <label for="q5a3">Frecuentemente</label>
+      <input type="radio" id="q5a4" name="q5" value="1" />
+      <label for="q5a4">Siempre</label>
+    </div>
+
+    <div class="question">
+      <p>6. ¿Tenés ganas de hacer cosas que antes disfrutabas?</p>
+      <input type="radio" id="q6a1" name="q6" value="1" required />
+      <label for="q6a1">Nunca</label>
+      <input type="radio" id="q6a2" name="q6" value="2" />
+      <label for="q6a2">A veces</label>
+      <input type="radio" id="q6a3" name="q6" value="3" />
+      <label for="q6a3">Frecuentemente</label>
+      <input type="radio" id="q6a4" name="q6" value="4" />
+      <label for="q6a4">Siempre</label>
+    </div>
+
+    <div class="question">
+      <p>7. ¿Te sentís con energía la mayor parte del día?</p>
+      <input type="radio" id="q7a1" name="q7" value="1" required />
+      <label for="q7a1">Nunca</label>
+      <input type="radio" id="q7a2" name="q7" value="2" />
+      <label for="q7a2">A veces</label>
+      <input type="radio" id="q7a3" name="q7" value="3" />
+      <label for="q7a3">Frecuentemente</label>
+      <input type="radio" id="q7a4" name="q7" value="4" />
+      <label for="q7a4">Siempre</label>
+    </div>
+
+    <div class="question">
+      <p>8. ¿Tenés pensamientos negativos sobre vos mismo?</p>
+      <input type="radio" id="q8a1" name="q8" value="4" required />
+      <label for="q8a1">Nunca</label>
+      <input type="radio" id="q8a2" name="q8" value="3" />
+      <label for="q8a2">A veces</label>
+      <input type="radio" id="q8a3" name="q8" value="2" />
+      <label for="q8a3">Frecuentemente</label>
+      <input type="radio" id="q8a4" name="q8" value="1" />
+      <label for="q8a4">Siempre</label>
+    </div>
+
+    <div class="question">
+      <p>9. ¿Podés expresar tus emociones con facilidad?</p>
+      <input type="radio" id="q9a1" name="q9" value="1" required />
+      <label for="q9a1">Nunca</label>
+      <input type="radio" id="q9a2" name="q9" value="2" />
+      <label for="q9a2">A veces</label>
+      <input type="radio" id="q9a3" name="q9" value="3" />
+      <label for="q9a3">Frecuentemente</label>
+      <input type="radio" id="q9a4" name="q9" value="4" />
+      <label for="q9a4">Siempre</label>
+    </div>
+
+    <div class="question">
+      <p>10. ¿Sentís que tenés control sobre tu vida?</p>
+      <input type="radio" id="q10a1" name="q10" value="1" required />
+      <label for="q10a1">Nunca</label>
+      <input type="radio" id="q10a2" name="q10" value="2" />
+      <label for="q10a2">A veces</label>
+      <input type="radio" id="q10a3" name="q10" value="3" />
+      <label for="q10a3">Frecuentemente</label>
+      <input type="radio" id="q10a4" name="q10" value="4" />
+      <label for="q10a4">Siempre</label>
+    </div>
+
+    <button type="submit">Enviar encuesta</button>
+  </form>
+
+  <div id="resultado" class="result" style="display:none;"></div>
+
+  <div class="memoria" style="display:none;" id="memoria">
+    🕊 En memoria al Colegio Parroquial Santa Bárbara 🕊
+  </div>
+
+  <div class="contacto" style="display:none;" id="contacto">
+    📞 Si necesitás hablar con alguien:<br />
+    Centro de Atención Emocional – San Juan, Argentina<br />
+    <a href="tel:08002225462">0800-222-5462 (SALUD)</a><br />
+    Línea gratuita y confidencial
+  </div>
+</main>
+
+<script>
+  const form = document.getElementById('encuestaForm');
+  const resultadoDiv = document.getElementById('resultado');
+  const memoriaDiv = document.getElementById('memoria');
+  const contactoDiv = document.getElementById('contacto');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let score = 0;
+
+    // Preguntas negativas: 1, 2, 5, 6, 8 (las que evalúan malestar)
+    // Las respuestas son valores entre 1 y 4, para las negativas invertimos el puntaje (5 - valor)
+    const negativas = [1, 2, 5, 6, 8];
+
+    for(let i=1; i<=10; i++) {
+      const radios = document.getElementsByName('q'+i);
+      let val = 0;
+      for(const r of radios) {
+        if(r.checked) val = parseInt(r.value);
+      }
+
+      if(negativas.includes(i)) {
+        score += (5 - val);
+      } else {
+        score += val;
+      }
+    }
+
+    // Evaluar resultado
+    let mensaje = '';
+    if(score >= 35) {
+      mensaje = "💚 ¡Buen estado emocional! Seguí cuidándote.";
+    } else if(score >= 25) {
+      mensaje = "🟡 Estado emocional medio. Sería bueno que hables con alguien de confianza.";
+    } else {
+      mensaje = "🔴 Estado emocional bajo. Es importante que pidas ayuda profesional.";
+    }
+
+    resultadoDiv.innerHTML = `<strong>Resultado emocional:</strong> ${mensaje}`;
+    resultadoDiv.style.display = 'block';
+
+    // Mostrar memoria y contacto
+    memoriaDiv.style.display = 'block';
+    contactoDiv.style.display = 'block';
+
+    // Scroll a resultado
+    resultadoDiv.scrollIntoView({behavior: "smooth"});
+  });
+</script>
+
+</body>
+</html>
